@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -13,13 +14,19 @@ const minLength = (len) => (val) => val && (val.length >= len);
 function RenderDish({dish}){
     if (dish != null) {
         return (
+            <FadeTransform
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>
             <Card>
-                 <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                <CardImg top src={baseUrl + dish.image} alt={dish.name} />
                 <CardBody>
                     <CardTitle>{dish.name}</CardTitle>
                     <CardText>{dish.description}</CardText>
                 </CardBody>
             </Card>
+            </FadeTransform>
         )
     }
     else {
@@ -30,28 +37,33 @@ function RenderDish({dish}){
 } 
 
 function RenderComments({comments, postComment, dishId}) {
+    
     const commentList = comments.map(comment => {
         return (
-            <li key= {comment.id}>
-                <p>{comment.comment}</p>
-                <p><i>{comment.author}</i>,
-                &nbsp;
-                {new Intl.DateTimeFormat('en-GB', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric'
+            <Fade in>
+                <li key= {comment.id}>
+                    <p>{comment.comment}</p>
+                    <p><i>{comment.author}</i>,
+                    &nbsp;
+                    {new Intl.DateTimeFormat('en-GB', {
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric'
 
-                }).format(new Date(comment.date))}
-                </p>
-                <hr></hr>
-            </li>
+                    }).format(new Date(comment.date))}
+                    </p>
+                    <hr></hr>
+                </li>
+            </Fade>
         )
     });
     return(
         <div>
             <h4> Comments </h4>
             <ul className='list-unstyled'>
-                {commentList}
+                <Stagger in>
+                    {commentList}
+                </Stagger>
             </ul>
             <CommentForm dishId={dishId} postComment={postComment}/>
         </div>
@@ -132,9 +144,6 @@ export class CommentForm extends Component{
 
     handleSubmit(values) {
         this.toggleModal();
-        // console.log('Current State is: ' + JSON.stringify(values));
-        // alert('Current State is: ' + JSON.stringify(values));
-        // // event.preventDefault();
         this.props.postComment(this.props.dishId, values.rating, values.author, values.comment)
     }
 
