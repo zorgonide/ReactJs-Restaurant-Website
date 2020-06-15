@@ -1,32 +1,41 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
+import { Fade, Stagger } from 'react-animation-components';
 
 function About(props) {
 
     function RenderLeader ({ leader}) {
         return (
-            <div key={leader.id} className="col-md-12 mt-4">
-                <Media >
-                    <Media left bottom>
-                        <Media object src = {leader.image} alt = {leader.name} />
-                    </Media>
-                    <Media body className="ml-3">
-                        <Media heading>
-                            {leader.name}
+            // <div key={leader.id} className="col-md-12 mt-4 ">
+                
+                    <Media >
+                        <Media left bottom>
+                            <Media object src = {baseUrl + leader.image} alt = {leader.name} />
                         </Media>
-                            <p>{leader.designation}</p>
-                            <p>{leader.description}</p>
+                        <Media body className="ml-3	 ">
+                            <Media heading>
+                                {leader.name}
+                            </Media>
+                            <div className = ".d-none">
+                                <p>{leader.designation}</p>
+                                <p>{leader.description}</p>
+                            </div>
+                        </Media>
                     </Media>
-                </Media>
-            </div>
+                
+                
+            // </div>
         );
     }
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
-            <div key={leader.id} className="col-12 col-md-12 m-1">
-                <RenderLeader leader={leader} />
-            </div>
+            <Fade in>
+                <li className="list-unstyled">
+                    <RenderLeader key={leader.id} leader={leader}></RenderLeader>
+                </li>
+            </Fade>
         );
     });
 
@@ -86,7 +95,7 @@ function About(props) {
                 </div>
                 <div className="col-12">
                     <Media list>
-                        {leaders}
+                        <Stagger in>{leaders}</Stagger>
                     </Media>
                 </div>
             </div>
