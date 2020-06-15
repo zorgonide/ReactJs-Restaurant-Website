@@ -6,10 +6,10 @@ export const addComment = (comment) => ({
     payload: comment
 });
 
-export const postFeedback = (feedID, firstname, lastname, telnum, email, agree, contactType, message) => (dispatch) => {
+export const postFeedback = ( firstname, lastname, telnum, email, agree, contactType, message) => (dispatch) => {
 
     const newFeedback = {
-        feedID: feedID,
+        // feedID: feedID,
         firstname: firstname, 
         lastname: lastname, 
         telnum: telnum, 

@@ -29,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
   fetchComments: () => dispatch(fetchComments()),
   fetchPromos: () => dispatch(fetchPromos()),
   fetchLeaders: () => dispatch(fetchLeaders()),
-  postFeedback: (feedID, firstname, lastname, telnum, email, agree, contactType, message) => dispatch(postFeedback(feedID, firstname, lastname, telnum, email, agree, contactType, message))
+  postFeedback: ( firstname, lastname, telnum, email, agree, contactType, message) => dispatch(postFeedback(firstname, lastname, telnum, email, agree, contactType, message))
 });
 
 class Main extends Component {
