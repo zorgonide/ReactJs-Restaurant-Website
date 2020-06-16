@@ -1,4 +1,4 @@
-Video of project [link](https://drive.google.com/file/d/1qg2EuDnzKKt5xzRLizpArrpXomCjwWGm/view?usp=sharing)
+__Video of project [link](https://drive.google.com/file/d/1qg2EuDnzKKt5xzRLizpArrpXomCjwWGm/view?usp=sharing)__
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
