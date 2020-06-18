@@ -9,8 +9,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Quick Start
 
+
+
 ```bash
-# Install dependencies
+# Install json-server and place db.json in a json-server folder  
+
+# Run server at localhost:3001
+json-server --watch .\db.json -d 2000 -p 3001
+
+# Back to repository, install dependencies
 npm install
 
 # Serve on localhost:3000
