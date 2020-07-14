@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npm install json-server -g
 
 # At any convenient location on your computer, create a new folder named json-server, and move to this folder.
-# Move the db.json file provided in repo to this folder. Move to this folder in your terminal window, 
+# Copy the db.json file provided in repo to this folder. Go to the json-server folder in your terminal window, 
 # and type the following at the command prompt to start the server:
 
 # Run server at localhost:3001
