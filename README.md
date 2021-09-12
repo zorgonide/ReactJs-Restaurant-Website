@@ -2,10 +2,7 @@
 
 ## Video of project [link](https://drive.google.com/file/d/1qg2EuDnzKKt5xzRLizpArrpXomCjwWGm/view?usp=sharing)
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
-
-> Built a restaurant website using ReactJs Framework as a Single Page Application, utilizing ReactStrap library for Bootstrap 4, and Redux for managing application state. A basic JSON-server was used with REST API.
+Built a restaurant website using ReactJs Framework as a Single Page Application, utilizing ReactStrap library for Bootstrap 4, and Redux for managing application state. A basic JSON-server was used with REST API.
 
 ## Quick Start
 
@@ -37,3 +34,9 @@ npm run build
 ### Author
 
 Ammar Khurshid
+
+### Connected Repositories
+
+[React native application](https://github.com/zorgonide/Confusion-React-Native)
+[Angular application](https://github.com/zorgonide/conFusion-Angular)
+[Backend](https://github.com/zorgonide/MongoDB-Express-REST-API-for-Restaurant)
