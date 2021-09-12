@@ -37,6 +37,6 @@ Ammar Khurshid
 
 ### Connected Repositories
 
-[React native application](https://github.com/zorgonide/Confusion-React-Native)
-[Angular application](https://github.com/zorgonide/conFusion-Angular)
+[React native application](https://github.com/zorgonide/Confusion-React-Native)  
+[Angular application](https://github.com/zorgonide/conFusion-Angular)  
 [Backend](https://github.com/zorgonide/MongoDB-Express-REST-API-for-Restaurant)
