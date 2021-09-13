@@ -1,6 +1,6 @@
 # React Restaurant Website
 
-## Video of project [link](https://drive.google.com/file/d/1qg2EuDnzKKt5xzRLizpArrpXomCjwWGm/view?usp=sharing)
+https://user-images.githubusercontent.com/48021258/133043738-33ae447b-8440-4a52-9010-839c0ea9c45a.mp4
 
 Built a restaurant website using ReactJs Framework as a Single Page Application, utilizing ReactStrap library for Bootstrap 4, and Redux for managing application state. A basic JSON-server was used with REST API.
 
